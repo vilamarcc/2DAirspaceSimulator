@@ -1,0 +1,77 @@
+//Si la distancia es comprometida, el circulo se rellenara de rojo
+
+                Position u = milista.posiciones[c];
+                Position m = milista.posiciones[c - 1];
+
+                double uX = Conversor.GetUtmX(u.Latitud, u.Longitud);
+                double uY = Conversor.GetUtmY(u.Latitud, u.Longitud);
+
+                double mX = Conversor.GetUtmX(m.Latitud, m.Longitud);
+                double mY = Conversor.GetUtmY(m.Latitud, m.Longitud);
+
+                double cx = Math.Abs(uX - mX);
+                double cy = Math.Abs(uY - mY);
+
+                double H = Math.Sqrt(cx * cx + cy * cy);
+
+                double dist = (u.DistSeguridad + m.DistSeguridad);
+
+                if (dist < H)
+                {
+
+                    SolidBrush myBrush = new SolidBrush(Color.Red);
+                    graphics.FillEllipse(myBrush, x, y, s, s);
+                    myBrush.Dispose();
+
+                    Alerta A = new Alerta();
+                    A.ShowDialog();
+                }
+                else
+                {
+                    // Draw an empty polygon
+
+                    graphics.DrawEllipse(h, x, y, s, s);
+
+                    h.Dispose();
+                }
+
+                c = c + 1;
+		}
+
+
+
+
+
+
+                //Creamos un obstaculo
+
+                Pen myPen = new Pen(Color.Red);
+
+
+                Point[] polygonPoints = new Point[4];
+                polygonPoints[0] = new Point(100, 100);
+                polygonPoints[1] = new Point(100, 150);
+                polygonPoints[2] = new Point(150, 150);
+                polygonPoints[3] = new Point(150, 100);
+
+                graphics.DrawPolygon(myPen, polygonPoints);
+                myPen.Dispose();
+
+
+
+                Pen myPen2 = new Pen(Color.Red);
+              
+
+                myPen.Dispose(); if ((pX > 100) && (pX < 150) && (pY > 100) && (pY < 150))
+
+                {
+                    //Rellenamos el rectangulo de rojo para avisar
+
+                    SolidBrush myBrush = new SolidBrush(Color.Red);
+                    graphics.FillPolygon(myBrush, polygonPoints);
+                    myBrush.Dispose();
+                }
+                else
+                {
+                    graphics.DrawPolygon(myPen, polygonPoints);
+                }

@@ -1,0 +1,7 @@
+D:\integracion info\WindowsForm1\pruebas\bin\Debug\pruebas.exe
+D:\integracion info\WindowsForm1\pruebas\bin\Debug\pruebas.pdb
+D:\integracion info\WindowsForm1\pruebas\bin\Debug\FlightPlanClass.dll
+D:\integracion info\WindowsForm1\pruebas\bin\Debug\FlightPlanClass.pdb
+D:\integracion info\WindowsForm1\pruebas\obj\x86\Debug\pruebas.exe
+D:\integracion info\WindowsForm1\pruebas\obj\x86\Debug\pruebas.pdb
+D:\integracion info\WindowsForm1\pruebas\obj\x86\Debug\pruebas.csprojResolveAssemblyReference.cache

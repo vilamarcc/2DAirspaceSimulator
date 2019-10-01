@@ -1,0 +1,7 @@
+Componentes del grupo:
+-Laura Parga
+-Sara Sanz
+-Gorka Zubiaurre
+-Marc Vila
+
+Para abrir el proyecto abre la carpeta WindowsForms1 y luego el archivo de visual estudio WindowsForms1
